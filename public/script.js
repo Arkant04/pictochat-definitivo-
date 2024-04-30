@@ -58,9 +58,12 @@ input.value = '';
 }
 });
 
-//Eveneto inicio chat
+//Evento inicio chat
 socket.on('init chat', (mensajes)=> {
   console.log(mensajes)
+  if(mensajes.startsWith('https://'))
+    console.log(mensajes)
+  
   mensajes.forEach(mensajesOBJ => {
     const li = document.createElement("li")
     li.innerHTML = mensajesOBJ.mensaje
@@ -79,4 +82,3 @@ socket.on('paint', (datos) => {
 ellipse(datos.x, datos.y, 20)
 });
 
- 
