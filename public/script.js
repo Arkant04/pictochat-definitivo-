@@ -62,8 +62,8 @@ input.value = '';
 socket.on('init chat', (mensajes)=> {
   console.log(mensajes)
   if(mensajes.startsWith('https://'))
-    console.log(mensajes)
-  
+    console.log("es un mensaje")
+
   mensajes.forEach(mensajesOBJ => {
     const li = document.createElement("li")
     li.innerHTML = mensajesOBJ.mensaje
