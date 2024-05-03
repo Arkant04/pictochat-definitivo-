@@ -63,9 +63,9 @@ socket.on('init chat', (mensajes)=> {
   console.log(mensajes)
   mensajes.forEach(mensajesOBJ => {
     const li = document.createElement("li")
-    const link = document.createElement("a")
     //console.log(typeof(mensajesOBJ.mensaje))
     if(mensajesOBJ.mensaje.startsWith("https://")){
+      const link = document.createElement("a")
       link.href = mensajesOBJ.mensaje
       link.textContent = mensajesOBJ.mensaje
       messages.appendChild(link)
