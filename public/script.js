@@ -64,12 +64,12 @@ socket.on('init chat', (mensajes)=> {
   mensajes.forEach(mensajesOBJ => {
     const li = document.createElement("li")
     const link = document.createElement("a")
-    //console.log("es un mensaje")
     //console.log(typeof(mensajesOBJ.mensaje))
     if(mensajesOBJ.mensaje.startsWith("https://")){
       link.href = mensajesOBJ.mensaje
       link.textContent = mensajesOBJ.mensaje
       messages.appendChild(link)
+      console.log("es un mensaje")
     }
     else{
       li.innerHTML = mensajesOBJ.mensaje
@@ -81,6 +81,13 @@ socket.on('init chat', (mensajes)=> {
 
 socket.on('chat message', (msg) => {
 const item = document.createElement('li');
+if(msg.startsWith("https://")){
+  const link = document.createElement("a")
+  link.href = msg
+  link.textContent = msg
+  item.appendChild(link)
+  console.log("es un mensaje")
+}
 item.textContent = msg;
 messages.appendChild(item);
 window.scrollTo(0, document.body.scrollHeight);
