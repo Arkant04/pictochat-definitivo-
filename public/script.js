@@ -3,8 +3,9 @@ const form = document.getElementById('formulario');
 const input = document.getElementById('inputTexto');
 const messages = document.getElementById('mensajes');
 //const Color = document.getElementById('InputColor')
-
+let ColorDelPincel = '#000000'
 let isDragging = false;
+
 const elemento = $('section')
   $( function() {
     $( "section" ).draggable({
@@ -44,15 +45,15 @@ function draw() {
             y: mouseY
         }
         //socket.emit("paint", datos)
-      fill(color);
+      fill(ColorDelPincel);
       //ellipse(mouseX, mouseY, 20)
-      line(mouseX, mouseY, pmouseX, pmouseY, rango)
+      line(mouseX, mouseY, pmouseX, pmouseY)
     }
 }
 
 function ColorFunction() {
   const color = document.querySelector("#InputColor").value;
-  pincelColor = color;
+  ColorDelPincel = color;
 }
 
 
