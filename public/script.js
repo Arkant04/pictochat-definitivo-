@@ -2,6 +2,7 @@ const socket = io();
 const form = document.getElementById('formulario');
 const input = document.getElementById('inputTexto');
 const messages = document.getElementById('mensajes');
+const Color = document.getElementById('InputColor')
 
 let isDragging = false;
 const elemento = $('section')
@@ -43,12 +44,22 @@ function draw() {
             y: mouseY
         }
         //socket.emit("paint", datos)
-      fill(0);
+      fill(Color);
       //ellipse(mouseX, mouseY, 20)
-      line(mouseX, mouseY, pmouseX, pmouseY)
+      line(mouseX, mouseY, pmouseX, pmouseY, rango)
     }
 }
 
+function Color() {
+  const color = document.querySelector("#InputColor").value;
+  pincelColor = color;
+}
+
+
+function Rango() {
+  const rango = document.querySelector("#TamañoPincelInput").value;
+  pincelSize = rango;
+}
 
 form.addEventListener('submit', (e) => {
 e.preventDefault();

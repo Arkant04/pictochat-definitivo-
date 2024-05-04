@@ -23,6 +23,18 @@
         <input type="submit" value="Enviar">
       </form>
     </section>
+
+    <section>
+      <div>
+        <label for="TamañoPincelInput" id="LabelDelTamañoPincel">Tamaño del pincel:</label>
+        <input type="range" id="TamañoPincelInput" min="1" max="100" value="10" onchange="Rango()">
+      </div>
+  
+      <div>
+        <label for="InputColor" id="colorPincel">Color:</label>
+        <input type="color" id="InputColor" onchange="Color()">
+      </div>
+    </section>
     <script src="/socket.io/socket.io.js"></script>
     <script src="script.js"></script>
     
