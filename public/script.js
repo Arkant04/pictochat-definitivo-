@@ -44,13 +44,13 @@ function draw() {
             y: mouseY
         }
         //socket.emit("paint", datos)
-      fill(Color);
+      fill(color);
       //ellipse(mouseX, mouseY, 20)
       line(mouseX, mouseY, pmouseX, pmouseY, rango)
     }
 }
 
-function Color() {
+function ColorFunction() {
   const color = document.querySelector("#InputColor").value;
   pincelColor = color;
 }
