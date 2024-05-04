@@ -48,7 +48,7 @@ function draw() {
         //socket.emit("paint", datos)
       fill(ColorDelPincel);
       //ellipse(mouseX, mouseY, 20)
-      line(mouseX, mouseY, pmouseX, pmouseY, )
+      line(mouseX, mouseY, pmouseX, pmouseY, TamañoDelPincel)
     }
 }
 
