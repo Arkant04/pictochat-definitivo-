@@ -4,6 +4,7 @@ const input = document.getElementById('inputTexto');
 const messages = document.getElementById('mensajes');
 //const Color = document.getElementById('InputColor')
 let ColorDelPincel = '#000000'
+let TamañoDelPincel = 10;
 let isDragging = false;
 
 const elemento = $('section')
@@ -47,7 +48,7 @@ function draw() {
         //socket.emit("paint", datos)
       fill(ColorDelPincel);
       //ellipse(mouseX, mouseY, 20)
-      line(mouseX, mouseY, pmouseX, pmouseY)
+      line(mouseX, mouseY, pmouseX, pmouseY, )
     }
 }
 
@@ -59,7 +60,7 @@ function ColorFunction() {
 
 function Rango() {
   const rango = document.querySelector("#TamañoPincelInput").value;
-  pincelSize = rango;
+  TamañoDelPincel = rango;
 }
 
 form.addEventListener('submit', (e) => {
