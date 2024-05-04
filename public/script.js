@@ -2,7 +2,7 @@ const socket = io();
 const form = document.getElementById('formulario');
 const input = document.getElementById('inputTexto');
 const messages = document.getElementById('mensajes');
-//const Color = document.getElementById('InputColor')
+const Color = document.getElementById('InputColor')
 let ColorDelPincel = '#000000'
 let TamañoDelPincel = 10;
 let isDragging = false;
@@ -53,8 +53,8 @@ function draw() {
 }
 
 function ColorFunction() {
-  const color = document.querySelector("#InputColor").value;
-  ColorDelPincel = color;
+  //const color = document.querySelector("#InputColor").value;
+  ColorDelPincel = Color;
 }
 
 
