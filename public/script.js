@@ -2,7 +2,7 @@ const socket = io();
 const form = document.getElementById('formulario');
 const input = document.getElementById('inputTexto');
 const messages = document.getElementById('mensajes');
-const Color = document.getElementById('InputColor')
+//const Color = document.getElementById('InputColor')
 
 let isDragging = false;
 const elemento = $('section')
